@@ -1,0 +1,73 @@
+main > section {
+	padding: 60px 15px 0;
+}
+footer .container p {
+	margin-bottom: 0;
+}
+
+.section-portfolio .portfolio-item {
+    padding-top: 15px;
+    padding-bottom: 15px;
+    position: relative;
+    overflow: hidden;
+    border-radius: 8px;
+}
+.section-portfolio .portfolio-item a {
+    display: block;
+    border-radius: 8px;
+}
+.section-portfolio .portfolio-item--tile {
+    position: relative;
+    display: block;
+    width: 100%;
+    padding-top: 100%;
+    overflow: hidden;
+    border-radius: 8px;
+}
+.section-portfolio .portfolio-item .add-bg:before {
+    z-index: 5;
+    background: rgba(0,0,0,.1);
+}
+.section-portfolio .portfolio-item--tile:before {
+    content: '';
+    position: absolute;
+    z-index: 10;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+.section-portfolio .portfolio-item--tile--screenshot {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 50%;
+    left: 0;
+    -ms-transform: translate(0,-50%) scale(1) rotate(0);
+    transform: translate(0,-50%) scale(1) rotate(0);
+    transition: all .5s ease-in;
+    z-index: 0;
+    object-position: center;
+    object-fit: cover;
+    font-family: 'object-fit: cover; object-position: center;';
+}
+.section-portfolio .portfolio-item:hover .portfolio-item--tile--screenshot {
+    -ms-transform: translate(0,-50%) scale(1.03) rotate(.02deg);
+    transform: translate(0,-50%) scale(1.03) rotate(.02deg);
+    -webkit-filter: brightness(1.05) contrast(1.1);
+    filter: brightness(1.05) contrast(1.1);
+}
+.section-portfolio .portfolio-item--tile--play {
+    position: absolute;
+    z-index: 10;
+    left: 50%;
+    top: 50%;
+    -ms-transform: translate(-50%,-50%);
+    transform: translate(-50%,-50%);
+    transition: all .5s ease-in;
+    width: 20%;
+}
+.section-portfolio .portfolio-item:hover .portfolio-item--tile--play {
+    -ms-transform: translate(-50%,-50%) scale(1.5) rotate(.02deg);
+    transform: translate(-50%,-50%) scale(1.5) rotate(.02deg);
+}
